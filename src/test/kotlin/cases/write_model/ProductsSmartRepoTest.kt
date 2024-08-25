@@ -15,7 +15,7 @@ import pro.azhidkov.training.project_moby.write_model.ProductsRepo
 
 
 @DisplayName("Репозиторий продуктов")
-class ProductsRepoTest(
+class ProductsSmartRepoTest(
     @Autowired private val repo: ProductsRepo,
     @Autowired private val producersRepo: ProducersRepo
 ) : MobyTest() {
