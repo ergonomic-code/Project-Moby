@@ -17,4 +17,14 @@ CREATE TABLE product
     description TEXT                     NOT NULL,
     producer    BIGINT                   NOT NULL REFERENCES producer,
     created_at  TIMESTAMP WITH TIME ZONE NOT NULL
-)
+);
+
+CREATE OR REPLACE VIEW product_view AS
+(
+SELECT pt.id,
+       pt.name,
+       pr.id   AS producer_id,
+       pr.name AS producer_name
+FROM product pt
+         JOIN producer pr ON pt.producer = pr.id
+    );
