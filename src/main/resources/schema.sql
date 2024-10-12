@@ -19,7 +19,7 @@ CREATE TABLE product
     created_at  TIMESTAMP WITH TIME ZONE NOT NULL
 );
 
-CREATE OR REPLACE VIEW product_view AS
+CREATE OR REPLACE VIEW product_view AS -- - SQL-вью
 (
 SELECT pt.id,
        pt.name,

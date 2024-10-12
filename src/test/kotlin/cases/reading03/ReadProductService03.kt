@@ -30,7 +30,7 @@ class ReadProduct03Test(
         loadedProduct.id shouldBe product.id
         loadedProduct.name shouldBe product.name
         loadedProduct.producer.id shouldBe producer.id
-        loadedProduct.producer.resolveOrThrow().name shouldBe producer.name
+        loadedProduct.producer.resolveOrThrow().name shouldBe producer.name // - resolveOrThrow
     }
 
 }
